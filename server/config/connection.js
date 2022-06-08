@@ -1,12 +1,11 @@
-
 const mongoose = require('mongoose');
 
 mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/bakery-website',
-    {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    }
+  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/pet-store',
+  {
+    useNewUrlParser: true, 
+    useUnifiedTopology: true,
+  }
 );
 
 module.exports = mongoose.connection;
