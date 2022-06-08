@@ -44,6 +44,54 @@ export const storeSlice = createSlice({
         },
         addToWishlist: (state, action) => {
             state.wishlist.push(action.payload);
-        }
-    }
-})
+        },
+        removeFromWishlist: (state, action) => {
+            state.wishlist = state.wishlist.filter(
+                (product) => product._id !== action.payload._id
+            );
+        },
+        updateWishlist: (state, action) => {
+            state.wishlist = action.payload;
+        },
+        deleteFromCart: (state, action) => {
+            let newState = state.cart.filter((product) => {
+                return product._id.toString() !== action.payload.toString();
+            });
+            state.cart = newState;
+        },
+        clearCart: (state, action) => {
+            state.cartOpen = false;
+            state.cart = [];
+        },
+        toggle_Cart: (state, action) => {
+            state.cartOpen = !state.cartOpen;
+        },
+        toggle_Modal: (state, action) => {
+            state.modal = !state.modal;
+        },
+        updateFile: (state, action) => {
+            state.file = action.payload;
+        },
+    },
+});
+
+export const {
+    updateProduct,
+    updateCategory,
+    updateCurrentCategory,
+    updateCurrentPage,
+    addToCart,
+    updateCart,
+    addMultipleToCart,
+    addToWishlist,
+    removeFromWishlist,
+    updateWishlist,
+    deleteFromCart,
+    clearCart,
+    toggle_Cart,
+    toggle_Modal,
+    updateFile,
+    updateUser,
+} = storeSlice.actions;
+
+export default storeSlice.reducer;
