@@ -122,7 +122,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className='bg-blue-700 border-gray-200 px-2 sm:px-4 py-2.5'>
+    <nav className='bg-indigo-400 border-gray-200 px-2 sm:px-4 py-2.5'>
       <div className='container flex flex-wrap justify-between items-center mx-auto'>
         <Link
           onClick={() => dispatch(updateCurrentPage("Home"))}
@@ -192,7 +192,7 @@ const Navbar = () => {
                     onClick={() => Auth.logout()}
                     className='flex flex-col justify-center'
                   >
-                    <li className='text-white hover:bg-blue-600 py-2 px-4'>
+                    <li className='text-white hover:bg-indigo-400 py-2 px-4'>
                       Logout
                     </li>
                   </Link>
@@ -210,11 +210,11 @@ const Navbar = () => {
                 >
                   <li
                     className={`${currentPage === "" && page.path === "/"
-                      ? "text-white bg-blue-600"
+                      ? "text-white bg-blue-200"
                       : currentPage === page.name
-                        ? "text-white bg-blue-600"
+                        ? "text-white bg-indigo-400"
                         : "text-white"
-                      } hover:text-white hover:bg-blue-600 py-2 px-4`}
+                      } hover:text-white hover:bg-indigo-400 py-2 px-4`}
                     onClick={() => {
                       setIsOpen(false);
                       dispatch(updateCurrentPage(page.name));
@@ -234,7 +234,7 @@ const Navbar = () => {
               className='flex items-center'
             >
               <i
-                className={`relative text-white fa-solid fa-cart-shopping text-xl ${currentPage === "Cart" && "bg-blue-600"
+                className={`relative text-white fa-solid fa-cart-shopping text-xl ${currentPage === "Cart" && "bg-indigo-400"
                   } p-2`}
               >
                 {cart.length > 0 && (

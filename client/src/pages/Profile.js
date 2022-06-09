@@ -54,13 +54,12 @@ const Profile = () => {
                   <div className='relative z-0'>
                     <img
                       className='mb-3 w-24 h-24 rounded-full shadow-lg'
-                      src={`${
-                        user.image_url ? user.image_url : "/assets/images/user.png"
-                      }`}
+                      src={`${user.image_url ? user.image_url : "/assets/images/user.png"
+                        }`}
                       alt='user'
                     />
                     <label htmlFor='file'>
-                      <i className='cursor-pointer absolute top-14 right-0 text-lg hover:text-white hover:bg-blue-700 bg-white px-2 py-1 border rounded-full fa-solid fa-camera'></i>
+                      <i className='cursor-pointer absolute top-14 right-0 text-lg hover:text-white hover:bg-indigo-700 bg-white px-2 py-1 border rounded-full fa-solid fa-camera'></i>
                     </label>
                     <input
                       ref={input}

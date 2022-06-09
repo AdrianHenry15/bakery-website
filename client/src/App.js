@@ -15,7 +15,7 @@ import PageNotFound from "./pages/PageNotFound";
 
 import ProductDetails from "./pages/ProductDetails";
 import { setContext } from "@apollo/client/link/context";
-import Success from "./pages/Sucess";
+import Success from "./pages/Success";
 
 const uploadLink = createUploadLink({
   uri: "/graphql",

@@ -158,7 +158,7 @@ const ProductDetails = () => {
                     <div className='relative'>
                       <select
                         ref={quantity}
-                        className='rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-500 text-base pl-3 pr-10'
+                        className='rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-indigo-500 text-base pl-3 pr-10'
                       >
                         {options}
                       </select>
@@ -184,16 +184,15 @@ const ProductDetails = () => {
                   </span>
                   <button
                     onClick={addToCartHandler}
-                    className='flex ml-auto text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 font-bold'
+                    className='flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-700 font-bold'
                   >
                     Add To Cart
                   </button>
                   {auth && (
                     <button
                       onClick={() => addToWishlistHandler(product)}
-                      className={`rounded-full w-10 h-10 bg-gray-200 p-0 hover:border hover:bg-gray-300 hover:border-red-500 inline-flex items-center justify-center ${
-                        product?.inWishlist ? "text-red-500" : "text-gray-500"
-                      }  ml-4`}
+                      className={`rounded-full w-10 h-10 bg-gray-200 p-0 hover:border hover:bg-gray-300 hover:border-red-500 inline-flex items-center justify-center ${product?.inWishlist ? "text-red-500" : "text-gray-500"
+                        }  ml-4`}
                     >
                       <i className='fa-solid fa-bookmark'></i>
                     </button>
