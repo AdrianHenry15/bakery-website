@@ -59,7 +59,7 @@ const Profile = () => {
                       alt='user'
                     />
                     <label htmlFor='file'>
-                      <i className='cursor-pointer absolute top-14 right-0 text-lg hover:text-white hover:bg-indigo-700 bg-white px-2 py-1 border rounded-full fa-solid fa-camera'></i>
+                      <i className='cursor-pointer absolute top-14 right-0 text-lg hover:text-white hover:bg-rose-700 bg-white px-2 py-1 border rounded-full fa-solid fa-camera'></i>
                     </label>
                     <input
                       ref={input}

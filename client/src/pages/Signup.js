@@ -51,7 +51,7 @@ const SignUp = () => {
           <form onSubmit={handleFormSubmit}>
             <input
               type="text"
-              className="border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-indigo-400 focus:outline-none w-full p-3 rounded mb-4"
+              className="border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-rose-900 focus:outline-none w-full p-3 rounded mb-4"
               name="firstName"
               placeholder="First Name"
               onChange={handleChange}
@@ -59,7 +59,7 @@ const SignUp = () => {
 
             <input
               type="text"
-              className="border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-indigo-400 focus:outline-none w-full p-3 rounded mb-4"
+              className="border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-rose-900 focus:outline-none w-full p-3 rounded mb-4"
               name="lastName"
               placeholder="Last Name"
               onChange={handleChange}
@@ -67,14 +67,14 @@ const SignUp = () => {
 
             <input
               type="email"
-              className="border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-indigo-400 focus:outline-none w-full p-3 rounded mb-4"
+              className="border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-rose-900 focus:outline-none w-full p-3 rounded mb-4"
               name="email"
               placeholder="Email"
               onChange={handleChange}
             />
             <input
               type="password"
-              className="border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-indigo-400 focus:outline-none w-full p-3 mb-4"
+              className="border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-rose-900 focus:outline-none w-full p-3 mb-4"
               name="password"
               placeholder="Password"
               onChange={handleChange}
@@ -89,7 +89,7 @@ const SignUp = () => {
             )}
             <button
               type="submit"
-              className="signUpBtn inline-block px-7 py-3 bg-rose-500 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-indigo-600 hover:shadow-lg focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-indigo-800 active:shadow-lg transition duration-150 ease-in-out"
+              className="signUpBtn inline-block px-7 py-3 bg-rose-500 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-rose-700 hover:shadow-lg focus:bg-rose-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-rose-900 active:shadow-lg transition duration-150 ease-in-out"
             >
               Sign Up
               <img

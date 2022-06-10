@@ -1,5 +1,5 @@
 import CartItems from "../components/CartItems";
-import { useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
 import { useLazyQuery } from "@apollo/client";
@@ -37,14 +37,14 @@ const Cart = () => {
 
   function submitCheckout() {
     const productIds = [];
-    
+
     cart.forEach((item) => {
-     
+
       for (let i = 0; i < item.quantity; i++) {
         productIds.push(item._id);
       }
     });
-   
+
     getCheckout({
       variables: { products: productIds },
     });
@@ -108,13 +108,13 @@ const Cart = () => {
             {auth ? (
               <button
                 onClick={submitCheckout}
-                className='bg-blue-700 font-semibold hover:bg-blue-800 py-3 text-sm text-white uppercase w-full'
+                className='checkoutBtn'
               >
                 Checkout
               </button>
             ) : (
               <Link to='/login'>
-                <button className='bg-blue-700 font-semibold hover:bg-blue-800 py-3 text-sm text-white uppercase w-full'>
+                <button className='checkoutBtn'>
                   Login to Checkout
                 </button>
               </Link>

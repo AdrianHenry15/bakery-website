@@ -21,7 +21,71 @@ h1 {
   font-size: 50px;
 }
 
-.shopButton {
+/* Shop Now Button started */
+
+.shopNowBtn {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.shopNowBtn:before {
+  content: '';
+  background: linear-gradient(45deg, #ff008c, #bd5f9d98, #a50166, #eb7eb4, #eea9c3be, #68054f, #610451, #ff00c8, #00e1fff8);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.shopNowBtn:active {
+  color: #000
+}
+
+.shopNowBtn:active:after {
+  background: transparent;
+}
+
+.shopNowBtn:hover:before {
+  opacity: 1;
+}
+
+.shopNowBtn:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(116, 17, 17);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* end of Shop Now Button */
+
+/* .shopButton {
   background-color: #1d1da7;
   color: #fff;
   border: none;
@@ -34,7 +98,7 @@ h1 {
 .shopButton:hover {
   background-color: #cddafd;
   transition: 0.7s;
-}
+} */
 
 .categories img {
   border-radius: 50%;
@@ -63,3 +127,45 @@ h1 {
   display: inline;
   margin-left: 5px;
 }
+
+.text-center {
+  text-align: center !important;
+}
+
+/* shopping cart checkout button styles start */
+.checkoutBtn {
+  background-color: #fef0db;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.checkoutBtn:hover {
+  background-color: #94c3ff;
+}
+
+.checkoutBtn:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+/* shopping cart button end */

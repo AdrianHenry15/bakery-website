@@ -10,7 +10,7 @@ import AdminProductList from "../components/AdminProductList";
 import Auth from "../utils/auth";
 
 const Admin = () => {
-    const auth = Auth.loggedIn();
+  const auth = Auth.loggedIn();
   const { categories } = useSelector((state) => state.store);
   const [showCategoryModal, setShowCategoryModal] = useState(false);
   const dispatch = useDispatch();
@@ -49,10 +49,10 @@ const Admin = () => {
       })
       .catch((err) => console.log(err));
   };
-    
-    if (!auth) {
-        window.location.href = "/";
-    }
+
+  if (!auth) {
+    window.location.href = "/";
+  }
 
   return (
     <div className='flex-1 flex'>
@@ -73,13 +73,12 @@ const Admin = () => {
                     return (
                       <li
                         key={index}
-                        className={`${
-                          !last && "border-b"
-                        } p-2 font-medium flex justify-between`}
+                        className={`${!last && "border-b"
+                          } p-2 font-medium flex justify-between`}
                       >
                         {category.name}
                         <div className='flex space-x-4 '>
-                          <i className='fa-solid fa-pen-to-square flex flex-col justify-center hover:text-blue-700'></i>
+                          <i className='fa-solid fa-pen-to-square flex flex-col justify-center hover:text-rose-700'></i>
                           <i
                             onClick={() => deleteCategoryHandler(category._id)}
                             className='cursor-pointer fa-solid fa-trash flex flex-col justify-center hover:text-red-600'
@@ -90,7 +89,7 @@ const Admin = () => {
                   })}
                 </ul>
                 <button
-                  className='bg-blue-600 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150'
+                  className='bg-rose-600 text-white active:bg-rose-600 font-bold uppercase text-sm px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150'
                   type='button'
                   onClick={() => setShowCategoryModal(true)}
                 >
