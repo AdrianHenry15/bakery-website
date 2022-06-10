@@ -122,7 +122,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className='bg-indigo-400 border-gray-200 px-2 sm:px-4 py-2.5'>
+    <nav className='bg-red-400 border-gray-200 px-2 sm:px-4 py-2.5'>
       <div className='container flex flex-wrap justify-between items-center mx-auto'>
         <Link
           onClick={() => dispatch(updateCurrentPage("Home"))}
@@ -130,7 +130,7 @@ const Navbar = () => {
           className='flex items-center'
         >
           <img
-            src='/assets/logo/logo.svg'
+            src='/assets/logo/apple-touch-icon.png'
             className='text-2xl h-12'
             alt='Logo'
           />
@@ -192,7 +192,7 @@ const Navbar = () => {
                     onClick={() => Auth.logout()}
                     className='flex flex-col justify-center'
                   >
-                    <li className='text-white hover:bg-indigo-400 py-2 px-4'>
+                    <li className='text-white hover:bg-red-400 py-2 px-4'>
                       Logout
                     </li>
                   </Link>

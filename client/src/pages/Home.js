@@ -11,16 +11,32 @@ import Loading from "../components/Loading";
 
 const slideImages = [
   {
-    url: "/assets/homepage/cat.jpeg",
-    caption: "Cat",
+    url: "/assets/homepage/cake.jpg",
+    caption: "Cake",
   },
   {
-    url: "/assets/homepage/parrots.jpeg",
-    caption: "Parrot",
+    url: "/assets/homepage/cupcake-1.jpg",
+    caption: "Cupcakes",
   },
   {
-    url: "/assets/homepage/dog.jpeg",
-    caption: "Dog",
+    url: "/assets/homepage/cupcake-2.jpg",
+    caption: "Another Cupcake",
+  },
+  {
+    url: "/assets/homepage/piping-ingredients.jpg",
+    caption: "Piping",
+  },
+  {
+    url: "/assets/homepage/powdered-fruit-tart-display.jpg",
+    caption: "Fruit Tart",
+  },
+  {
+    url: "/assets/homepage/tart.jpg",
+    caption: "Tart",
+  },
+  {
+    url: "/assets/homepage/wedding-cake-1.jpg",
+    caption: "Wedding Cake",
   },
 ];
 
@@ -39,16 +55,6 @@ const categories = [
     url: "/assets/categories/fish/fish.jpeg",
     name: "Fish",
     path: "/store/fish",
-  },
-  {
-    url: "/assets/categories/hamsters/hamster.jpeg",
-    name: "Hamster",
-    path: "/store/hamster",
-  },
-  {
-    url: "/assets/categories/parrots/parrot.jpeg",
-    name: "Bird",
-    path: "/store/bird",
   },
 ];
 
@@ -108,7 +114,7 @@ const Home = () => {
       <div className='bg-white mb-5 shadow-md'>
         <div className='container mx-auto'>
           <div className='p-2'>
-            <p className='font-bold md:ml-9 text-2xl'>Shop By Pet</p>
+            <p className='font-bold md:ml-9 text-2xl'>Shop By Cake</p>
           </div>
           <div className='categories bg-white pb-5'>
             <div className='grid grid-cols-3 md:grid-cols-5 gap-4'>

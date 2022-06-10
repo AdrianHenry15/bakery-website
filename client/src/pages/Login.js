@@ -73,12 +73,12 @@ const LogIn = () => {
               )}
               <button
                 type='submit'
-                className='inline-block px-7 py-3 bg-indigo-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-indigo-800 active:shadow-lg transition duration-150 ease-in-out'
+                className='inline-block px-7 py-3 bg-rose-500 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-indigo-800 active:shadow-lg transition duration-150 ease-in-out'
               >
                 Login
                 <img
                   id='buttonLogo'
-                  src='/assets/logo/logo.svg'
+                  src='/assets/logo/apple-touch-icon.png'
                   className='w-full'
                   alt='Logo'
                 />
