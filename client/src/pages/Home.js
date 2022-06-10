@@ -111,20 +111,23 @@ const Home = () => {
       <div className='bg-white mb-5 shadow-md'>
         <div className='container mx-auto'>
           <div className='p-2'>
-            <p className='font-bold md:ml-9 text-2xl'>Shop By Sweets</p>
+            <p
+              className='font-bold md:ml-9 text-2xl'
+              id="categoryText">Shop By Sweets
+            </p>
           </div>
           <div className='categories bg-white pb-5'>
             <div className='grid grid-cols-3 md:grid-cols-3 gap-3'>
               {categories.map((category, index) => (
                 <Link
                   onClick={() => dispatch(updateCurrentPage("store"))}
-                  to={`${categories_ids.filter(
-                    (category_id) => category_id.name === category.name
-                  )[0]?.path
-                    }`}
+                  to={`${categories_ids.filter((category_id) => category_id.name === category.name)[0]?.path}`}
                   key={index}
+                  id="categoryText"
                 >
-                  <div key={index} className='text-center mx-auto'>
+                  <div
+                    key={index}
+                    className='text-center mx-auto'>
                     <img
                       className='inline-flex w-44'
                       alt={category.name}
