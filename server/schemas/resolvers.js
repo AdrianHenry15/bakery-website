@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Product, Category, Order } = require("../models");
+const { User, Product, Category, SubCategory, Order } = require("../models");
 const { signToken } = require("../utils/auth");
 const { GraphQLUpload } = require("graphql-upload");
 const generateRandomString = require("../utils/helpers");
@@ -68,16 +68,18 @@ const resolvers = {
       return Product.find()
         .select("-__v")
         .populate("category")
-        .populate("subCategory");
+      // .populate("subCategory");
     },
     product: async (parent, { id }) => {
       return Product.findOne({ _id: id })
         .select("-__v")
         .populate("category")
-        .populate("subCategory");
+      // .populate("subCategory");
     },
     categories: async () => {
-      return Category.find();
+      return Category.find()
+        .select("-__v")
+        .populate("subCategory");
     },
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
@@ -309,6 +311,53 @@ const resolvers = {
       );
 
       return category;
+    },
+
+    addSubCategory: async (parent, args, context) => {
+      if (!context.user) {
+        throw new AuthenticationError("Not logged in");
+      }
+      if (!context.user.isAdmin) {
+        throw new AuthenticationError("Not authorized");
+      }
+
+      await Category.findOneAndUpdate(
+        { _id: args.category },
+        { $push: { subcategories: args._id } },
+        { new: true },
+      );
+      // create category and return new category
+      const subCategory = await SubCategory.create(args);
+
+      return subCategory;
+    },
+    deleteSubCategory: async (parent, { id }, context) => {
+      if (!context.user) {
+        throw new AuthenticationError("Not logged in");
+      }
+      if (!context.user.isAdmin) {
+        throw new AuthenticationError("Not authorized");
+      }
+
+      const subCategory = await SubCategory.findOneAndDelete({ _id: id });
+
+      return subCategory;
+    },
+    updateSubCategory: async (parent, args, context) => {
+      if (!context.user) {
+        throw new AuthenticationError("Not logged in");
+      }
+      if (!context.user.isAdmin) {
+        throw new AuthenticationError("Not authorized");
+      }
+
+      const subCategory = await SubCategory.findOneAndUpdate(
+        { _id: args._id },
+        args,
+        { new: true }
+      );
+
+      return subCategory;
     },
 
     addProduct: async (parent, args, context) => {

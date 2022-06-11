@@ -104,6 +104,37 @@ export const DELETE_CATEGORY = gql`
   }
 `;
 
+export const UPDATE_CATEGORY = gql`
+  mutation Mutation($id: ID!, $name: String!) {
+    updateCategory(id: $id, name: $name) {
+      _id
+      name
+    }
+  }`;
+
+export const ADD_SUBCATEGORY = gql`
+  mutation Mutation($name: String!, $categoryId: ID!) {
+    addSubCategory(name: $name, categoryId: $categoryId) {
+      _id
+      name
+    }
+  }`;
+
+export const DELETE_SUBCATEGORY = gql`
+  mutation Mutation($id: ID!) {
+    deleteSubCategory(id: $id) {
+      _id
+    }
+  }`;
+
+export const UPDATE_SUBCATEGORY = gql`
+  mutation Mutation($id: ID!, $name: String!) {
+    updateSubCategory(id: $id, name: $name) {
+      _id
+      name
+    }
+  }`;
+
 export const ADD_PRODUCT = gql`
   mutation Mutation(
     $image: Upload!
@@ -130,6 +161,10 @@ export const ADD_PRODUCT = gql`
       category {
         _id
         name
+        subCategory {
+          _id
+          name
+        }
       }
     }
   }
@@ -163,6 +198,10 @@ export const UPDATE_PRODUCT = gql`
       category {
         _id
         name
+        subCategory {
+          _id
+          name
+        }
       }
     }
   }

@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const storeSlice = createSlice({
-  name: "ProPet",
+  name: "MoSweets",
   initialState: {
     products: [],
     cart: [],
     categories: [],
+    subCategories: [],
     currentCategory: "",
     currentPage: "",
     user: {
@@ -29,6 +30,12 @@ export const storeSlice = createSlice({
     },
     updateCurrentCategory: (state, action) => {
       state.currentCategory = action.payload;
+    },
+    updateSubCategory: (state, action) => {
+      state.subCategories = action.payload;
+    },
+    updateCurrentSubCategory: (state, action) => {
+      state.currentSubCategory = action.payload;
     },
     updateCurrentPage: (state, action) => {
       state.currentPage = action.payload;
@@ -88,6 +95,8 @@ export const {
   updateProduct,
   updateCategory,
   updateCurrentCategory,
+  updateSubCategory,
+  updateCurrentSubCategory,
   addToCart,
   addMultipleToCart,
   deleteFromCart,

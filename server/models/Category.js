@@ -7,7 +7,11 @@ const categorySchema = new Schema({
     type: String,
     required: true,
     trim: true
-  }
+  },
+  subCategory: [{
+    type: Schema.Types.ObjectId,
+    ref: "SubCategory",
+  }]
 });
 
 const Category = mongoose.model('Category', categorySchema);

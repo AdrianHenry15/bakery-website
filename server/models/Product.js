@@ -29,10 +29,6 @@ const productSchema = new Schema({
     ref: "Category",
     required: true,
   },
-  subCategory: {
-    type: Schema.Types.ObjectId,
-    ref: "SubCategory",
-  },
 });
 
 const Product = mongoose.model("Product", productSchema);

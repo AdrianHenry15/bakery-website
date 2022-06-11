@@ -50,6 +50,10 @@ export const GET_CATEGORIES = gql`
     categories {
       _id
       name
+      subCategory {
+        _id
+        name
+      }
     }
   }
 `;
@@ -66,6 +70,10 @@ export const GET_PRODUCTS = gql`
       category {
         _id
         name
+        subCategory {
+          _id
+          name
+        }
       }
     }
   }

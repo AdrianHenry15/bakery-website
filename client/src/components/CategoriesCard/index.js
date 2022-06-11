@@ -10,10 +10,11 @@ const CategoriesCard = () => {
   const dispatch = useDispatch();
   const { data } = useQuery(GET_CATEGORIES);
   let categories = useSelector((state) => state.store.categories);
-  
+
   categories = categories.map((category) => {
     return {
       name: category.name,
+      subCategories: category.subCategories,
       path: `/store/category/${category._id}`,
     };
   });
@@ -37,11 +38,12 @@ const CategoriesCard = () => {
             return (
               <Link key={index} to={category.path}>
                 <li
-                  className={`${
-                    !last && "border-b-2"
-                  } p-2 hover:bg-gray-100 font-medium`}
+                  className={`${!last && "border-b-2"
+                    } p-2 hover:bg-gray-100 font-medium`}
                 >
                   {category.name}
+                  { }
+                  {/* <li>hello</li> */}
                 </li>
               </Link>
             );
