@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&display=swap');
 
 body {
   margin: 0;
@@ -27,10 +28,19 @@ h1 {
 
 /* home page font text started here */
 
-#categoryText {
-  /* font-family: 'Cedarville Cursive', cursive; */
+#categoryText1 {
   font-family: 'Gochi Hand', cursive;
+}
+#categoryText2 {
+  font-family: 'Gochi Hand', cursive;
+}
 
+#navbarText {
+  font-family: 'Grape Nuts', cursive;
+}
+
+#welcomeText {
+  font-family: 'Grape Nuts', cursive;
 }
 
 /* home page font text ended here */

@@ -20,8 +20,8 @@ const Profile = () => {
     }
   }, [inputFile, dispatch]);
 
-  const isLoggined = Auth.loggedIn();
-  if (!isLoggined) {
+  const isLoggedIn = Auth.loggedIn();
+  if (!isLoggedIn) {
     return <Navigate to='/login' />;
   }
 

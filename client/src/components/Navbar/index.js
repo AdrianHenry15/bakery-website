@@ -135,9 +135,13 @@ const Navbar = () => {
             alt='Logo'
           />
           <div className='relative flex flex-col p-4'>
-            <h1 className='relative logo text-3xl text-white'>MoSweets</h1>
-            <p className='absolute text-sm top-11 left-12 text-white'>
-              onlineStore
+            <h1
+              className='relative logo text-4xl text-white'
+              id="navbarText">MoSweets</h1>
+            <p
+              className='absolute text-lg top-11 left-12 text-white'
+              id="navbarText">
+              Bakery
             </p>
           </div>
         </Link>
@@ -234,7 +238,7 @@ const Navbar = () => {
               className='flex items-center'
             >
               <i
-                className={`relative text-white fa-solid fa-cart-shopping text-xl ${currentPage === "Cart" && "bg-rose-900 rounded-xl"
+                className={`relative text-white fa-solid fa-cart-shopping text-xl hover:bg-rose-900 rounded-xl ${currentPage === "Cart" && "bg-rose-900 rounded-xl"
                   } p-2`}
               >
                 {cart.length > 0 && (

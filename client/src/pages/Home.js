@@ -92,7 +92,9 @@ const Home = () => {
       </div>
 
       <div className='flex bg-gradient-to-r from-rose-900 via-rose-300 to-rose-400 flex-col justify-center mb-4 shadow-md'>
-        <h2 className='text-center text-4xl py-4 font-semibold'>
+        <h2
+          className='text-center text-5xl py-4 font-semibold'
+          id="welcomeText">
           Welcome to MoSweets{" "}
         </h2>
         <div className='w-full text-center'>
@@ -112,8 +114,8 @@ const Home = () => {
         <div className='container mx-auto'>
           <div className='p-2'>
             <p
-              className='font-bold md:ml-9 text-2xl'
-              id="categoryText">Shop By Sweets
+              className='md:ml-9 text-3xl'
+              id="categoryText1">Shop By Sweets
             </p>
           </div>
           <div className='categories bg-white pb-5'>
@@ -123,7 +125,7 @@ const Home = () => {
                   onClick={() => dispatch(updateCurrentPage("store"))}
                   to={`${categories_ids.filter((category_id) => category_id.name === category.name)[0]?.path}`}
                   key={index}
-                  id="categoryText"
+                  id="categoryText2"
                 >
                   <div
                     key={index}
@@ -133,7 +135,7 @@ const Home = () => {
                       alt={category.name}
                       src={category.url}
                     />
-                    <p className='mt-5 font-semibold text-lg'>
+                    <p className='mt-5 text-3xl'>
                       {category.name}
                     </p>
                   </div>
