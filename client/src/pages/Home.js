@@ -73,7 +73,7 @@ const Home = () => {
   });
 
   return (
-    <div className='flex flex-col flex-1'>
+    <div className='flex flex-col flex-1 '>
       {loading && <Loading />}
       <div className='container mx-auto my-3 md:my-5'>
         <Slide>
@@ -81,7 +81,7 @@ const Home = () => {
             <div className='each-slide' key={index}>
               <div>
                 <img
-                  className='slideImage h-96'
+                  className='slideImage h-96 rounded-full border-solid border-4 border-rose-800'
                   src={slideImage.url}
                   alt='slide-pictures'
                 />
@@ -110,16 +110,16 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='bg-white mb-5 shadow-md'>
+      <div className='bg-white mb-5 shadow-md border-solid border-4 border-rose-800'>
         <div className='container mx-auto'>
           <div className='p-2'>
             <p
-              className='md:ml-9 text-3xl'
+              className='md:ml-9 text-3xl '
               id="categoryText1">Shop By Sweets
             </p>
           </div>
-          <div className='categories bg-white pb-5'>
-            <div className='grid grid-cols-3 md:grid-cols-3 gap-3'>
+          <div className='categories bg-white pb-5 '>
+            <div className='grid grid-cols-3 md:grid-cols-3 gap-3 '>
               {categories.map((category, index) => (
                 <Link
                   onClick={() => dispatch(updateCurrentPage("store"))}
@@ -129,9 +129,9 @@ const Home = () => {
                 >
                   <div
                     key={index}
-                    className='text-center mx-auto'>
+                    className='text-center mx-auto '>
                     <img
-                      className='inline-flex w-44'
+                      className='inline-flex w-44 border-solid border-4 border-rose-800'
                       alt={category.name}
                       src={category.url}
                     />
