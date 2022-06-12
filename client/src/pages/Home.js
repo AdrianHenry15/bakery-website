@@ -73,7 +73,7 @@ const Home = () => {
   });
 
   return (
-    <div className='flex flex-col flex-1 '>
+    <div className='flex flex-col flex-1 bg-gradient-to-r from-black via-pink-900 to-rose-900'>
       {loading && <Loading />}
       <div className='container mx-auto my-3 md:my-5'>
         <Slide>
@@ -81,7 +81,7 @@ const Home = () => {
             <div className='each-slide' key={index}>
               <div>
                 <img
-                  className='slideImage h-96 rounded-full border-solid border-4 border-rose-800'
+                  className='slideImage h-72 rounded-full border-solid border-4 border-rose-800'
                   src={slideImage.url}
                   alt='slide-pictures'
                 />
@@ -97,7 +97,7 @@ const Home = () => {
           id="welcomeText">
           Welcome to MoSweets{" "}
         </h2>
-        <div className='w-full text-center'>
+        <div className='w-full text-center pb-2'>
           <Link
             to='/store'
             onClick={() => dispatch(updateCurrentPage("store"))}
@@ -110,7 +110,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='bg-white mb-5 shadow-md border-solid border-4 border-rose-800'>
+      <div className='bg-white mb-5 shadow-md'>
         <div className='container mx-auto'>
           <div className='p-2'>
             <p
